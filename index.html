@@ -14,10 +14,10 @@
     }
 
     .page {
-      width: 1920px;
-      min-height: 1080px;
+      width: 100%;
+      min-height: 56.25vw;
       background: #F8F9FB;
-      padding: 50px 40px 60px 40px;
+      padding: 2.6vw 2.08vw 3.125vw 2.08vw;
     }
 
     /* HEADER */
@@ -25,152 +25,152 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-left: 180px;
-      margin-bottom: 36px;
+      padding-left: 9.375vw;
+      margin-bottom: 1.875vw;
     }
 
     .header-main { flex: 1; }
 
     .name {
-      font-size: 64px;
+      font-size: 3.33vw;
       font-weight: 700;
       color: #0B1F5F;
       line-height: 1;
-      margin-bottom: 14px;
+      margin-bottom: 0.729vw;
     }
 
     .role {
-      font-size: 34px;
+      font-size: 1.77vw;
       font-weight: 600;
       color: #1E5EFF;
-      margin-bottom: 22px;
+      margin-bottom: 1.15vw;
     }
 
     .summary {
-      font-size: 22px;
+      font-size: 1.15vw;
       color: #1A1A1A;
       line-height: 1.55;
     }
 
     .contact {
-      min-width: 420px;
-      padding-left: 40px;
+      min-width: 21.875vw;
+      padding-left: 2.08vw;
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      font-size: 24px;
+      gap: 1.5625vw;
+      font-size: 1.25vw;
       color: #111;
     }
 
     /* DIVIDER */
     .divider {
-      height: 2px;
+      height: 0.104vw;
       background: #D8DCE5;
-      margin-bottom: 36px;
+      margin-bottom: 1.875vw;
     }
 
     /* CONTENT */
     .content {
       display: grid;
       grid-template-columns: 1.35fr 1fr;
-      gap: 60px;
+      gap: 3.125vw;
     }
 
     /* SECTION TITLE */
     .section-title {
-      font-size: 42px;
+      font-size: 2.19vw;
       font-weight: 700;
       color: #0B1F5F;
-      margin-bottom: 28px;
+      margin-bottom: 1.458vw;
       letter-spacing: 0.5px;
     }
 
     /* TIMELINE */
     .timeline {
       position: relative;
-      padding-left: 50px;
+      padding-left: 2.6vw;
     }
 
     .timeline::before {
       content: '';
       position: absolute;
-      left: 18px;
-      top: 10px;
+      left: 0.9375vw;
+      top: 0.521vw;
       bottom: 0;
-      width: 4px;
+      width: 0.208vw;
       background: #0B1F5F;
     }
 
     .job {
       position: relative;
-      margin-bottom: 44px;
+      margin-bottom: 2.29vw;
     }
 
     .job::before {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 1.042vw;
+      height: 1.042vw;
       border-radius: 50%;
       background: #0B1F5F;
-      left: -41px;
-      top: 10px;
+      left: -2.135vw;
+      top: 0.521vw;
     }
 
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 12px;
-      gap: 24px;
+      margin-bottom: 0.625vw;
+      gap: 1.25vw;
     }
 
     .job-title {
-      font-size: 34px;
+      font-size: 1.77vw;
       font-weight: 700;
       color: #0B1F5F;
     }
 
     .job-date {
-      font-size: 26px;
+      font-size: 1.35vw;
       color: #333;
       white-space: nowrap;
     }
 
     .job-desc {
-      font-size: 22px;
+      font-size: 1.15vw;
       color: #1A1A1A;
       line-height: 1.65;
     }
 
     /* EDUCATION */
-    .education { margin-top: 44px; }
+    .education { margin-top: 2.29vw; }
 
-    .education-item { margin-bottom: 20px; }
+    .education-item { margin-bottom: 1.042vw; }
 
     .education-title {
-      font-size: 22px;
+      font-size: 1.15vw;
       font-weight: 700;
       color: #0B1F5F;
     }
 
     .education-sub {
-      font-size: 18px;
+      font-size: 0.9375vw;
       color: #4B5563;
-      margin-top: 4px;
+      margin-top: 0.208vw;
     }
 
     /* SKILLS ORBIT */
     .skills-orbit {
       position: relative;
-      width: 500px;
-      height: 500px;
-      margin: 0 auto 40px;
+      width: 26.04vw;
+      height: 26.04vw;
+      margin: 0 auto 2.08vw;
     }
 
     .center-circle {
-      width: 190px;
-      height: 190px;
+      width: 38%;
+      height: 38%;
       border-radius: 50%;
       background: #0B3AAE;
       color: white;
@@ -182,39 +182,39 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 26px;
+      font-size: 1.15vw;
       font-weight: 700;
       line-height: 1.45;
-      padding: 20px;
+      padding: 1.042vw;
       z-index: 1;
     }
 
     .orbit-item {
       position: absolute;
-      width: 120px;
-      height: 120px;
+      width: 24%;
+      height: 24%;
       border-radius: 50%;
       background: white;
-      border: 2px solid #D8DCE5;
+      border: 0.104vw solid #D8DCE5;
       color: #0B1F5F;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 13px;
+      font-size: 0.577vw;
       font-weight: 700;
       line-height: 1.4;
-      padding: 12px;
+      padding: 0.625vw;
       z-index: 1;
     }
 
-    /* Evenly spaced at 60° intervals, orbit radius 190px, container 500px (center 250,250) */
-    .orbit-1 { top: 0;    left: 50%; transform: translateX(-50%); }
-    .orbit-2 { top: 95px; right: 26px; }
-    .orbit-3 { top: 285px; right: 26px; }
+    /* Evenly spaced at 60° intervals — percentage positions within container */
+    .orbit-1 { top: 0;   left: 50%; transform: translateX(-50%); }
+    .orbit-2 { top: 19%; right: 5.2%; }
+    .orbit-3 { top: 57%; right: 5.2%; }
     .orbit-4 { bottom: 0; left: 50%; transform: translateX(-50%); }
-    .orbit-5 { top: 285px; left: 26px; }
-    .orbit-6 { top: 95px;  left: 26px; }
+    .orbit-5 { top: 57%; left: 5.2%; }
+    .orbit-6 { top: 19%; left: 5.2%; }
 
     .orbit-lines {
       position: absolute;
@@ -224,40 +224,40 @@
     }
 
     /* TECH GROUPS */
-    .tech-group { margin-bottom: 20px; }
+    .tech-group { margin-bottom: 1.042vw; }
 
     .tech-group-label {
-      font-size: 16px;
+      font-size: 0.833vw;
       font-weight: 700;
       color: #0B1F5F;
-      padding-bottom: 7px;
-      border-bottom: 2px solid #0B3AAE;
-      margin-bottom: 14px;
+      padding-bottom: 0.365vw;
+      border-bottom: 0.104vw solid #0B3AAE;
+      margin-bottom: 0.729vw;
       letter-spacing: 0.4px;
     }
 
     .tech-icons-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 16px;
+      gap: 0.625vw 0.833vw;
     }
 
     .tech-icon-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
-      width: 58px;
+      gap: 0.26vw;
+      width: 3.02vw;
     }
 
     .tech-icon-item img {
-      width: 38px;
-      height: 38px;
+      width: 1.979vw;
+      height: 1.979vw;
       object-fit: contain;
     }
 
     .tech-icon-item span {
-      font-size: 11px;
+      font-size: 0.573vw;
       font-weight: 600;
       color: #374151;
       text-align: center;
@@ -265,13 +265,13 @@
     }
 
     .tech-badge {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
+      width: 1.979vw;
+      height: 1.979vw;
+      border-radius: 0.417vw;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
+      font-size: 0.521vw;
       font-weight: 800;
       color: white;
       text-align: center;
@@ -279,28 +279,37 @@
       flex-shrink: 0;
     }
 
+    /* PROFESSIONAL SKILLS */
+    .subsection-title {
+      font-size: 1.25vw;
+      font-weight: 700;
+      color: #0B1F5F;
+      margin-top: 1.042vw;
+      margin-bottom: 0.833vw;
+    }
+
     /* PROGRESS BARS */
-    .skill-row { margin-bottom: 20px; }
+    .skill-row { margin-bottom: 1.042vw; }
 
     .skill-label {
       display: flex;
       justify-content: space-between;
-      font-size: 24px;
+      font-size: 1.25vw;
       color: #111;
-      margin-bottom: 8px;
+      margin-bottom: 0.417vw;
     }
 
     .progress {
       width: 100%;
-      height: 14px;
-      border-radius: 7px;
+      height: 0.729vw;
+      border-radius: 0.365vw;
       background: #D9DDE5;
       overflow: hidden;
     }
 
     .progress-fill {
       height: 100%;
-      border-radius: 7px;
+      border-radius: 0.365vw;
       background: #0B3AAE;
     }
   </style>
@@ -442,7 +451,7 @@
             <line x1="250" y1="250" x2="86"  y2="345" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"/>
             <line x1="250" y1="250" x2="86"  y2="155" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"/>
           </svg>
-          <div class="center-circle">AGENTIC<br>AI<br>ENGINEERING</div>
+          <div class="center-circle">AGENTIC AI ENGINEERING</div>
           <div class="orbit-item orbit-1">AI AGENTS &amp; ORCHESTRATION</div>
           <div class="orbit-item orbit-2">SOFTWARE MODERNIZATION</div>
           <div class="orbit-item orbit-3">PLATFORM ENGINEERING</div>
@@ -451,7 +460,7 @@
           <div class="orbit-item orbit-6">LEADERSHIP &amp; STRATEGY</div>
         </div>
 
-        <div class="section-title" style="margin-top:28px;">TECHNOLOGY STACK</div>
+        <div class="section-title" style="margin-top:1.458vw;">TECHNOLOGY STACK</div>
 
         <div class="tech-group">
           <div class="tech-group-label">LANGUAGES</div>
@@ -518,39 +527,39 @@
           </div>
         </div>
 
-        <div class="subsection-title">Professional Skills</div>
+        <div class="section-title" style="margin-top:28px;">Professional Skills</div>
 
         <div class="skill-row">
           <div class="skill-label">
-            <span>Strategic Leadership</span><span>78%</span>
+            <span>Strategic Leadership</span>
           </div>
           <div class="progress"><div class="progress-fill" style="width:78%"></div></div>
         </div>
 
         <div class="skill-row">
           <div class="skill-label">
-            <span>Technical Vision &amp; Architecture</span><span>97%</span>
+            <span>Technical Vision &amp; Architecture</span>
           </div>
           <div class="progress"><div class="progress-fill" style="width:97%"></div></div>
         </div>
 
         <div class="skill-row">
           <div class="skill-label">
-            <span>Agentic AI &amp; Automation</span><span>96%</span>
+            <span>Agentic AI &amp; Automation</span>
           </div>
           <div class="progress"><div class="progress-fill" style="width:96%"></div></div>
         </div>
 
         <div class="skill-row">
           <div class="skill-label">
-            <span>Distributed Systems</span><span>84%</span>
+            <span>Distributed Systems</span>
           </div>
           <div class="progress"><div class="progress-fill" style="width:84%"></div></div>
         </div>
 
         <div class="skill-row">
           <div class="skill-label">
-            <span>AI Modernization</span><span>98%</span>
+            <span>AI Modernization</span>
           </div>
           <div class="progress"><div class="progress-fill" style="width:98%"></div></div>
         </div>
