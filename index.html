@@ -25,7 +25,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-left: 9.375vw;
+      /* padding-left: 9.375vw; */
       margin-bottom: 1.875vw;
     }
 
@@ -42,7 +42,7 @@
     .role {
       font-size: 1.77vw;
       font-weight: 600;
-      color: #1E5EFF;
+      color: #0B1F5F;
       margin-bottom: 1.15vw;
     }
 
@@ -57,9 +57,37 @@
       padding-left: 2.08vw;
       display: flex;
       flex-direction: column;
-      gap: 1.5625vw;
-      font-size: 1.25vw;
-      color: #111;
+      gap: 0.677vw;
+      font-size: 1.1vw;
+      color: #333;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625vw;
+    }
+
+    .contact-icon {
+      font-size: 1.2vw;
+      width: 1.5vw;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .linkedin-badge {
+      width: 1.35vw;
+      height: 1.35vw;
+      background: #0A66C2;
+      color: white;
+      border-radius: 0.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.833vw;
+      font-weight: 800;
+      flex-shrink: 0;
     }
 
     /* DIVIDER */
@@ -74,6 +102,11 @@
       display: grid;
       grid-template-columns: 1.35fr 1fr;
       gap: 3.125vw;
+    }
+
+    .content > div:first-child {
+      border-right: 0.104vw solid #D8DCE5;
+      padding-right: 1.5625vw;
     }
 
     /* SECTION TITLE */
@@ -322,15 +355,28 @@
         <div class="name">HENRIQUE GOUVEIA</div>
         <div class="role">Head of Agentic AI Engineering</div>
         <div class="summary">
-          Engineering leader driving enterprise AI transformation through Agentic AI,<br>
-          software modernization and AI-native delivery practices.
+          Engineering leader driving the next generation of software delivery through Agentic AI,<br>
+          automation, and modern engineering practices. Passionate about building platforms that amplify<br>
+          developer productivity, accelerable business outcomes and create durable competitive advantage.
         </div>
       </div>
       <div class="contact">
-        <div>Valinhos-SP, Brazil</div>
-        <div>hgouveia@icloud.com</div>
-        <div>+55 (16) 99725-3597</div>
-        <div>linkedin.com/in/gouveiahenrique</div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>Valinhos-SP, Brazil</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>hgouveia@icloud.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📱</span>
+          <span>+55 (16) 99725-3597</span>
+        </div>
+        <div class="contact-item">
+          <div class="linkedin-badge">in</div>
+          <a href="https://linkedin.com/in/gouveiahenrique" target="_blank">@gouveiahenrique</a>
+        </div>
       </div>
     </div>
 
@@ -480,7 +526,6 @@
             <div class="tech-icon-item"><img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/codex-color.png" alt="OpenAI"><span>OpenAI (Codex)</span></div>
             <div class="tech-icon-item"><img src="https://avatars.githubusercontent.com/u/225919603?s=200&v=4" alt="OpenHands"><span>OpenHands</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="LangGraph"><span>LangGraph</span></div>
-            <div class="tech-icon-item"><div class="tech-badge" style="background:#0078D4;">AG</div><span>AutoGen</span></div>
             <div class="tech-icon-item"><div class="tech-badge" style="background:#0B1F5F; font-size:9px;">MCP</div><span>MCP</span></div>
             <div class="tech-icon-item"><div class="tech-badge" style="background:#E63946;">Crew</div><span>CrewAI</span></div>
             <div class="tech-icon-item"><div class="tech-badge" style="background:#0078D4; font-size:9px;">SK</div><span>Semantic Kernel</span></div>
@@ -515,12 +560,10 @@
           <div class="tech-group-label">PLATFORMS &amp; TOOLS</div>
           <div class="tech-icons-row">
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"><span>Docker</span></div>
-            <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/apachekafka/231F20" alt="Kafka"><span>Kafka</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/redis/FF4438" alt="Redis"><span>Redis</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/rabbitmq/FF6600" alt="RabbitMQ"><span>RabbitMQ</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/elastic/005571" alt="Elasticsearch"><span>Elasticsearch</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></div>
-            <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"><span>GitHub</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins"><span>Jenkins</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/argo/EF7B4D" alt="ArgoCD"><span>ArgoCD</span></div>
             <div class="tech-icon-item"><img src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus"><span>Prometheus</span></div>
