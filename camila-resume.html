@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camila Bonatte Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #F8F9FB;
+      color: #1A1A1A;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 56.25vw;
+      background: #F8F9FB;
+      padding: 5vw;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.875vw;
+    }
+
+    .header-main { flex: 1; }
+
+    .name {
+      font-size: 3.33vw;
+      font-weight: 700;
+      color: #0B1F5F;
+      line-height: 1;
+      margin-bottom: 0.729vw;
+    }
+
+    .role {
+      font-size: 1.77vw;
+      font-weight: 600;
+      color: #0B1F5F;
+      margin-bottom: 1.15vw;
+    }
+
+    .summary {
+      font-size: 1.15vw;
+      color: #1A1A1A;
+      line-height: 1.55;
+    }
+
+    .contact {
+      min-width: 21.875vw;
+      padding-left: 2.08vw;
+      display: flex;
+      flex-direction: column;
+      gap: 0.677vw;
+      font-size: 1.1vw;
+      color: #333;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.625vw;
+    }
+
+    .contact-icon {
+      font-size: 1.2vw;
+      width: 1.5vw;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .linkedin-badge {
+      width: 1.35vw;
+      height: 1.35vw;
+      background: #0A66C2;
+      color: white;
+      border-radius: 0.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.833vw;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 0.104vw;
+      background: #D8DCE5;
+      margin-bottom: 1.875vw;
+    }
+
+    /* CONTENT */
+    .content {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 3.125vw;
+    }
+
+    .content > div:first-child {
+      border-right: 0.104vw solid #D8DCE5;
+      padding-right: 1.5625vw;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 2.19vw;
+      font-weight: 700;
+      color: #0B1F5F;
+      margin-bottom: 1.458vw;
+      letter-spacing: 0.5px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding-left: 2.6vw;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.9375vw;
+      top: 0.521vw;
+      bottom: 0;
+      width: 0.208vw;
+      background: #0B1F5F;
+    }
+
+    .job {
+      position: relative;
+      margin-bottom: 2.29vw;
+    }
+
+    .job::before {
+      content: '';
+      position: absolute;
+      width: 1.042vw;
+      height: 1.042vw;
+      border-radius: 50%;
+      background: #0B1F5F;
+      left: -2.135vw;
+      top: 0.521vw;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.625vw;
+      gap: 1.25vw;
+    }
+
+    .job-title {
+      font-size: 1.77vw;
+      font-weight: 700;
+      color: #0B1F5F;
+    }
+
+    .job-date {
+      font-size: 1.35vw;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .job-desc {
+      font-size: 1.15vw;
+      color: #1A1A1A;
+      line-height: 1.65;
+    }
+
+    .case-title {
+      font-size: 1.35vw;
+      font-weight: 700;
+      color: #0B3AAE;
+      margin: 1.04vw 0 0.31vw;
+    }
+
+    .case-role {
+      font-size: 1.0vw;
+      font-weight: 600;
+      color: #4B5563;
+      margin-bottom: 0.52vw;
+    }
+
+    .job-desc ul {
+      margin: 0.52vw 0 0 1.25vw;
+      font-size: 1.1vw;
+      line-height: 1.55;
+    }
+
+    .job-desc li { margin-bottom: 0.42vw; }
+
+    .metric { color: #0B3AAE; font-weight: 700; }
+
+    /* EDUCATION */
+    .education { margin-top: 2.29vw; }
+
+    .education-item { margin-bottom: 1.042vw; }
+
+    .education-title {
+      font-size: 1.15vw;
+      font-weight: 700;
+      color: #0B1F5F;
+    }
+
+    .education-sub {
+      font-size: 0.9375vw;
+      color: #4B5563;
+      margin-top: 0.208vw;
+    }
+
+    /* SKILLS ORBIT */
+    .skills-orbit {
+      position: relative;
+      width: 26.04vw;
+      height: 26.04vw;
+      margin: 0 auto 2.08vw;
+    }
+
+    .center-circle {
+      width: 38%;
+      height: 38%;
+      border-radius: 50%;
+      background: #0B3AAE;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.15vw;
+      font-weight: 700;
+      line-height: 1.45;
+      padding: 1.042vw;
+      z-index: 1;
+    }
+
+    .orbit-item {
+      position: absolute;
+      width: 24%;
+      height: 24%;
+      border-radius: 50%;
+      background: white;
+      border: 0.104vw solid #D8DCE5;
+      color: #0B1F5F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.577vw;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 0.625vw;
+      z-index: 1;
+    }
+
+    .orbit-1 { top: 0;   left: 50%; transform: translateX(-50%); }
+    .orbit-2 { top: 19%; right: 5.2%; }
+    .orbit-3 { top: 57%; right: 5.2%; }
+    .orbit-4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .orbit-5 { top: 57%; left: 5.2%; }
+    .orbit-6 { top: 19%; left: 5.2%; }
+
+    .orbit-lines {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+
+    /* TECH GROUPS */
+    .tech-group { margin-bottom: 1.042vw; }
+
+    .tech-group-label {
+      font-size: 0.833vw;
+      font-weight: 700;
+      color: #0B1F5F;
+      padding-bottom: 0.365vw;
+      border-bottom: 0.104vw solid #0B3AAE;
+      margin-bottom: 0.729vw;
+      letter-spacing: 0.4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.52vw;
+    }
+
+    .pill {
+      font-size: 0.78vw;
+      font-weight: 600;
+      color: #0B1F5F;
+      background: white;
+      border: 0.104vw solid #D8DCE5;
+      border-radius: 1vw;
+      padding: 0.31vw 0.83vw;
+    }
+
+    /* PROGRESS BARS */
+    .skill-row { margin-bottom: 1.042vw; }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.25vw;
+      color: #111;
+      margin-bottom: 0.417vw;
+    }
+
+    .progress {
+      width: 100%;
+      height: 0.729vw;
+      border-radius: 0.365vw;
+      background: #D9DDE5;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 0.365vw;
+      background: #0B3AAE;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <div class="header-main">
+        <div class="name">CAMILA BONATTE</div>
+        <div class="role">Group Product Manager</div>
+        <div class="summary">
+          Building products that unlock new revenue streams. I build and scale digital products across<br>
+          Fintech, Payments and Retail Media, partnering with Engineering, Data and Business teams to deliver<br>
+          at scale across LATAM, Africa and the United States.
+        </div>
+      </div>
+      <div class="contact">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>Campinas, Brazil</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>cbonatte@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📱</span>
+          <span>+55 19 99133-9591</span>
+        </div>
+        <div class="contact-item">
+          <div class="linkedin-badge">in</div>
+          <a href="https://linkedin.com/in/camila-bonatte" target="_blank">@camila-bonatte</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🌐</span>
+          <span>English • Portuguese • Spanish</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+
+      <!-- LEFT: EXPERIENCE + EDUCATION -->
+      <div>
+        <div class="section-title">EXPERIENCE</div>
+
+        <div class="timeline">
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">BEES | Anheuser-Busch InBev</div>
+              <div class="job-date">Aug 2020 – Present</div>
+            </div>
+            <div class="job-desc">
+              Leading product strategy and execution across Fintech, Payments and Retail Media for one of Latin America's largest B2B marketplaces.
+
+              <div class="case-title">Scale Retail Media</div>
+              <div class="case-role">Group Product Manager</div>
+              <strong>Mission.</strong> Build and validate the next revenue engine by proving product-market fit through a zero-to-one MVP strategy.
+              <ul>
+                <li>Led product vision, strategy and execution for a Retail Media MVP across five countries.</li>
+                <li>Launched Sponsored Products, Sponsored Brands and Banner Ads.</li>
+                <li>Defined a build-vs-buy strategy using Topsort to accelerate validation and reduce execution risk.</li>
+                <li>Prioritized ROAS as the primary success metric for advertisers.</li>
+                <li>Leading a business targeting <span class="metric">US$5M revenue</span>, a <span class="metric">55× growth</span> opportunity.</li>
+              </ul>
+
+              <div class="case-title">Monetize Financial Services</div>
+              <div class="case-role">Group Product Manager</div>
+              <strong>Mission.</strong> Build a digital credit platform enabling underserved retailers to access credit lines while creating a scalable financial services business and unlocking new marketplace revenue.
+              <ul>
+                <li>Led 4 Product Managers, 3 Associate PMs and 4 squads across six LATAM countries.</li>
+                <li>Owned the end-to-end digital credit platform from acquisition through collections.</li>
+                <li>Defined the strategy for proprietary credit solutions funded primarily by AB InBev.</li>
+                <li>Partnered with Data Science to evolve proprietary credit scoring and risk models.</li>
+                <li>Led product strategy behind initiatives contributing to <span class="metric">US$50M EBITDA</span>.</li>
+              </ul>
+
+              <div class="case-title">Enable Digital Payments</div>
+              <div class="case-role">Product Manager</div>
+              <strong>Mission.</strong> Build the digital payments foundation for the marketplace, enabling the transition from cash to digital payments across underbanked markets on a scalable global platform.
+              <ul>
+                <li>Led delivery across LATAM, Africa and the US, coordinating two squads and mentoring two Associate PMs.</li>
+                <li>Delivered PIX, Credit Card, Mobile Money, Bank Transfer and a global Payment Service.</li>
+                <li>Accelerated digital payment adoption, reducing cash handling, logistics and operational costs.</li>
+                <li>Delivered payment integrations while navigating diverse regulatory environments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Project Manager | Tata Consultancy Services</div>
+              <div class="job-date">2019 – 2020</div>
+            </div>
+            <div class="job-desc">
+              Led a R$16M MAPFRE customer portal program in partnership with teams in Brazil and Spain. Managed budget, governance, vendors and executive stakeholders for a large-scale digital transformation.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">PMO &amp; Product Owner | Vita IT</div>
+              <div class="job-date">2018 – 2019</div>
+            </div>
+            <div class="job-desc">
+              Established the PMO while leading an innovation initiative integrating software products into Cisco infrastructure projects.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Business Manager | Stefanini</div>
+              <div class="job-date">2014 – 2018</div>
+            </div>
+            <div class="job-desc">
+              Managed a business unit, P&amp;L, commercial negotiations and strategic partnerships across consulting and outsourcing services.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="education">
+          <div class="section-title">EDUCATION</div>
+          <div class="education-item">
+            <div class="education-title">PUC-Campinas</div>
+            <div class="education-sub">Technologist in IT Project Management</div>
+          </div>
+          <div class="education-item">
+            <div class="education-title">Metropolitan State University of Denver</div>
+            <div class="education-sub">Business Communication</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: SKILLS -->
+      <div>
+        <div class="section-title">EXPERTISE</div>
+
+        <div class="skills-orbit">
+          <svg class="orbit-lines" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <line x1="250" y1="250" x2="250" y2="60" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+            <line x1="250" y1="250" x2="415" y2="155" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+            <line x1="250" y1="250" x2="415" y2="345" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+            <line x1="250" y1="250" x2="250" y2="440" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+            <line x1="250" y1="250" x2="86" y2="345" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+            <line x1="250" y1="250" x2="86" y2="155" stroke="#B0B8CC" stroke-width="3" stroke-dasharray="7,5"></line>
+          </svg>
+          <div class="center-circle">PRODUCT STRATEGY</div>
+          <div class="orbit-item orbit-1">FINTECH &amp; PAYMENTS</div>
+          <div class="orbit-item orbit-2">DIGITAL CREDIT &amp; RISK</div>
+          <div class="orbit-item orbit-3">RETAIL MEDIA &amp; ADS</div>
+          <div class="orbit-item orbit-4">B2B MARKETPLACE</div>
+          <div class="orbit-item orbit-5">DATA &amp; AI PRODUCTS</div>
+          <div class="orbit-item orbit-6">ZERO-TO-ONE &amp; GROWTH</div>
+        </div>
+
+        <div class="section-title" style="margin-top:1.458vw;">TOOLKIT</div>
+
+        <div class="tech-group">
+          <div class="tech-group-label">DOMAINS</div>
+          <div class="pill-row">
+            <span class="pill">Fintech</span>
+            <span class="pill">Payments</span>
+            <span class="pill">Retail Media</span>
+            <span class="pill">B2B Marketplace</span>
+            <span class="pill">Digital Credit</span>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-label">METHODOLOGIES</div>
+          <div class="pill-row">
+            <span class="pill">Product Discovery</span>
+            <span class="pill">Build-vs-Buy</span>
+            <span class="pill">MVP &amp; PMF</span>
+            <span class="pill">Scrum (PSM I)</span>
+            <span class="pill">Management 3.0</span>
+            <span class="pill">ROAS / KPI</span>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-label">TOOLS &amp; PLATFORMS</div>
+          <div class="pill-row">
+            <span class="pill">Topsort</span>
+            <span class="pill">Generative AI</span>
+            <span class="pill">Claude / Claude Code</span>
+            <span class="pill">Data &amp; Analytics</span>
+            <span class="pill">PIX</span>
+            <span class="pill">Mobile Money</span>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-label">PROFESSIONAL DEVELOPMENT</div>
+          <div class="pill-row">
+            <span class="pill">GenAI for PMs</span>
+            <span class="pill">AI Fluency</span>
+            <span class="pill">Digital Product Leadership – DNC</span>
+            <span class="pill">Emerging Tech (Mastertech)</span>
+          </div>
+        </div>
+
+        <div class="section-title" style="margin-top:28px;">Professional Skills</div>
+
+        <div class="skill-row">
+          <div class="skill-label"><span>Product Strategy &amp; Vision</span></div>
+          <div class="progress"><div class="progress-fill" style="width:97%"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-label"><span>Fintech &amp; Payments</span></div>
+          <div class="progress"><div class="progress-fill" style="width:95%"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-label"><span>Revenue &amp; Monetization</span></div>
+          <div class="progress"><div class="progress-fill" style="width:94%"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-label"><span>Cross-Functional Leadership</span></div>
+          <div class="progress"><div class="progress-fill" style="width:92%"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-label"><span>Data &amp; AI Products</span></div>
+          <div class="progress"><div class="progress-fill" style="width:85%"></div></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body></html>
