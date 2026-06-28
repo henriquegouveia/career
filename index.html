@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henrique Gouveia</title>
+  <meta name="description" content="Henrique Gouveia — AI-Native Engineering Leader." />
+
+  <!-- Forward social/SEO signals from the chosen variant's canonical -->
+  <link rel="canonical" href="https://gouveiahenrique.github.io/" />
+
+  <style>
+    :root {
+      --bg: #FBFBF9;
+      --ink: #14181F;
+      --muted: #6A727E;
+      --hairline: #D6D5CF;
+      --accent: #2C50D4;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0E13;
+        --ink: #ECEDEF;
+        --muted: #8A929D;
+        --hairline: #2C333D;
+        --accent: #7E97FF;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      overflow: hidden;
+    }
+
+    /* Full-bleed frame holding the active variant */
+    .frame {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: var(--bg);
+    }
+
+    /* Floating switcher */
+    .switcher {
+      position: fixed;
+      z-index: 10;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.3rem;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: saturate(150%) blur(12px);
+      -webkit-backdrop-filter: saturate(150%) blur(12px);
+      border: 1px solid var(--hairline);
+      border-radius: 999px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+    .switcher .opt {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: transparent;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: color 0.2s ease, background-color 0.2s ease;
+      white-space: nowrap;
+    }
+    .switcher .opt:hover { color: var(--ink); }
+    .switcher .opt[aria-pressed="true"] {
+      color: #fff;
+      background: var(--accent);
+    }
+    @media (prefers-color-scheme: dark) {
+      .switcher .opt[aria-pressed="true"] { color: #0B0E13; }
+    }
+    .switcher :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 420px) {
+      .switcher .opt { padding: 0.5rem 0.8rem; font-size: 0.66rem; display: none; }
+    }
+  </style>
+</head>
+<body>
+  <iframe id="view" class="frame" title="Henrique Gouveia — profile"></iframe>
+
+  <script>
+    (function () {
+      var view = document.getElementById('view');
+      view.src = 'index-distinguished.html';
+      document.title = 'Henrique Gouveia';
+    })();
+  </script>
+</body>
+</html>
